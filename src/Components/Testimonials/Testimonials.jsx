@@ -7,10 +7,23 @@ import user_3 from "../../assets/user-3.png";
 import user_4 from "../../assets/user-4.png";
 const Testimonials = () => {
   const slider = useRef();
+  let tx = 0;
 
-  const slideForward = () => {};
+  const slideForward = () => {
+    if (tx > -50) {
+      tx -= 25;
+    }
 
-  const slideBackward = () => {};
+    slider.current.style.transform = `translateX(${tx}%)`;
+  };
+
+  const slideBackward = () => {
+    if (tx < 0) {
+      tx += 25;
+    }
+
+    slider.current.style.transform = `translateX(${tx}%)`;
+  };
 
   return (
     <div className="testimonials my-20 mx-auto py-0 px-20 relative">
