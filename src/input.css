@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    @apply bg-[#f5f5f5];
+}
+
+.hero {
+    background: linear-gradient(rgba(8,0,58,0.7), rgba(8,0,58,0.7)), url('./assets/hero.png');
+}
+
+.btn {
+    @apply bg-white text-[#212121] py-3.5 px-6 text-base rounded-3xl cursor-pointer border-0 outline-0 inline-flex items-center justify-center
+}
+
+.btn.dark-btn {
+    @apply bg-[#212ea0] text-white
+}
