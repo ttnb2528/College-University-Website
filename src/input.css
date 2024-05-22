@@ -12,8 +12,12 @@ body {
     @apply bg-[#f5f5f5];
 }
 
+.contain {
+    @apply px-[5%] xl:px-[10%];
+}
+
 .hero {
-    background: linear-gradient(rgba(8,0,58,0.7), rgba(8,0,58,0.7)), url('./assets/hero.png');
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('./assets/hero.png');
 }
 
 .btn {
@@ -22,4 +26,60 @@ body {
 
 .btn.dark-btn {
     @apply bg-[#212ea0] text-white
+}
+
+@media (max-width: 1024px) {
+    nav ul li {
+        @apply my-3 mx-4;
+    }
+}
+
+@media (max-width: 840px) {
+    nav ul {
+        @apply fixed top-0 bottom-0 right-0 bg-[#212ea0] z-[-1] w-[210px] pt-[70px] transition-all duration-500;
+    }
+
+    nav ul li {
+        @apply block my-6 mx-10;
+    }
+
+    .hide-mobile-menu {
+        @apply right-[-210px];
+    }
+}
+
+@media (max-width: 600px) {
+    .user-info {
+        @apply block mb-3 text-sm;
+    }
+
+    .user-info h3 {
+        @apply text-base mt-1;
+    }
+
+    .slider p {
+        @apply text-sm;
+    }
+
+    .footer {
+        @apply block text-center;
+    }
+
+    .footer ul {
+        @apply mt-3;
+    }
+
+    .footer ul li {
+        @apply m-3;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact {
+        @apply block;
+    }
+
+    .contact-col {
+        @apply p-5;
+    }
 }
