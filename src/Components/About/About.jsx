@@ -2,7 +2,7 @@ import React from "react";
 import about_img from "../../assets/about.png";
 import play_icon from "../../assets/play-icon.png";
 
-const About = () => {
+const About = ({ setPlayState }) => {
   return (
     <div className="about max-[800px]:flex-col my-[100px] mx-auto flex items-center justify-between w-[90%]">
       <div className="about-left max-[800px]:basis-full max-[800px]:m-5 max-[800px]:order-2 min-[800px]:basis-2/5 min-[800px]:m-0 relative">
@@ -11,6 +11,7 @@ const About = () => {
           src={play_icon}
           alt=""
           className="w-[60px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl"
+          onClick={() => setPlayState(true)}
         />
       </div>
       <div className="about-right max-[800px]:basis-full min-[800px]:basis-[56%]">
